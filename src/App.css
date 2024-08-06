@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: sans-serif;
+  -webkit-font-smoothing: auto;
+  -moz-font-smoothing: auto;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: auto;
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.board {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  /* Lower z-index value */
+}
+.dot {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: ScalefadeIn 0.1s;
+}
+@keyframes ScalefadeIn {
+  0% {
+    opacity: 0;
+    scale: 0
+  }
+  100% {
+    opacity: 1;
+    scale:1
+  }
+}
+
+.buttons{
+  margin: 20px;
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+
+}
+.funButton{
+  background-color: green;
+  color: white;
+  border: none;
+  width: 60px;
+  height: 30px;
+  z-index: 2;
+
+}
